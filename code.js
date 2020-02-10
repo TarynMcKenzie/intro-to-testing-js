@@ -4,5 +4,12 @@ function helloWorld() {
 }
 
 function sayHello(name){
-    return "Hello, " + name + "!";
+    var result;
+
+    if (name ===  undefined || name === false){
+       result = "Hello, World!";
+    } else {
+        result = "Hello, " + name + "!";
+    }
+    return result;
 }

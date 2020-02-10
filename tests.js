@@ -30,5 +30,28 @@ describe("sayHello", function(){
     it('should return the string "Hello, Pat!" when executed', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('should not be a null value' , function() {
+        expect(sayHello()).not.toBe(null);
+    });
+    it('should not be an empty string ""' , function() {
+        expect(sayHello()).not.toBe("");
+    });
+    it('should not be a numeric value' , function() {
+        expect(sayHello()).not.toBe(!NaN);
+    });
+    it('should not be a numeric string' , function() {
+        expect(sayHello()).not.toBe('number');
+    });
+    it('should not be an array' , function() {
+        expect(sayHello()).not.toBe(!"array");
+    });
+    it('should not be an object' , function() {
+        expect(sayHello()).not.toBe(!"object");
+    });
 });
