@@ -13,3 +13,7 @@ function sayHello(name){
     }
     return result;
 }
+
+function isFive(num){
+    return parseFloat(num) === 5;
+}
