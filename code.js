@@ -17,3 +17,8 @@ function sayHello(name){
 function isFive(num){
     return parseFloat(num) === 5;
 }
+
+function isEven(num){
+    return parseFloat(num) % 2 === 0;
+}
+

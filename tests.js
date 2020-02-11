@@ -56,6 +56,9 @@ describe("sayHello", function(){
     it('should not be an object' , function() {
         expect(sayHello()).not.toBe(!"object");
     });
+    it("should never return 'undefined' when called", function() {
+        expect(sayHello()).not.toBe(undefined);
+    });
 });
 
 // Unit tests for the isFive function
@@ -69,5 +72,39 @@ describe('isFive', function() {
     it('should return the boolean value, true if the number is "5"', function() {
         expect(isFive("5")).toBe(true);
     });
+    it("should never return 'undefined' when called", function() {
+        expect(isFive()).not.toBe(undefined);
+    });
 
+});
+
+// Unit tests for the isEven function
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return true if input is 2', function() {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true if input is -4', function() {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false if input is 3', function() {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return false if input is "banana"', function() {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return false if input is Infinity', function() {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false if input is a boolean value', function() {
+        expect(typeof isEven()).not.toBe(true);
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(isEven()).not.toBe(undefined);
+    });
+    it("should return false if called without an argument", function() {
+        expect(isEven( undefined)).toBe(false);
+    });
 });
